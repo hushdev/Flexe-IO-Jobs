@@ -1,0 +1,78 @@
+// Sizes
+$small: 480px;
+$medium: 834px;
+$large: 1289px;
+$xlarge: 1903px;
+// Border ============================================
+
+.br-50{ border-radius: 2rem; }
+
+@mixin borderCreate ($size, $coficent, $counts) {
+  @for $count from 0 to $counts {
+    .b-#{$count} { border-width: $size * ($coficent * $count); border-style: solid; }
+    .bx-#{$count} { border-left-width: $size * ($coficent * $count); border-right-width: $size * ($coficent * $count); border-right-style: solid; }
+    .by-#{$count} { border-top-width: $size * ($coficent * $count); border-bottom-width: $size * ($coficent * $count); border-top-style: solid; border-bottom-style: solid;}
+    .bl-#{$count} { border-left-width: $size * ($coficent * $count); border-left-style: solid; }
+    .bt-#{$count} { border-top-width: $size * ($coficent * $count); border-top-style: solid; }
+    .br-#{$count} { border-right-width: $size * ($coficent * $count); border-right-style: solid; }
+    .bb-#{$count} { border-bottom-width: $size * ($coficent * $count); border-bottom-style: solid; }
+  }
+  @media (max-width: $small) {
+    @for $count from 0 to $counts {
+      .b-#{$count}-XS { border-width: $size * ($coficent * $count); border-style: solid; }
+      .bx-#{$count}-XS { border-left-width: $size * ($coficent * $count); border-right-width: $size * ($coficent * $count); border-left-style: solid; border-right-style: solid; }
+      .by-#{$count}-XS { border-top-width: $size * ($coficent * $count); border-bottom-width: $size * ($coficent * $count); border-top-style: solid; border-bottom-style: solid;}
+      .bl-#{$count}-XS { border-left-width: $size * ($coficent * $count); border-left-style: solid; }
+      .bt-#{$count}-XS { border-top-width: $size * ($coficent * $count); border-top-style: solid; }
+      .br-#{$count}-XS { border-right-width: $size * ($coficent * $count); border-right-style: solid; }
+      .bb-#{$count}-XS { border-bottom-width: $size * ($coficent * $count); border-bottom-style: solid; }
+    }
+  }
+  @media (min-width: $small) {
+    @for $count from 0 to $counts {
+      .b-#{$count}-S { border-width: $size * ($coficent * $count); border-style: solid; }
+      .bx-#{$count}-S { border-left-width: $size * ($coficent * $count); border-right-width: $size * ($coficent * $count); border-left-style: solid; border-right-style: solid; }
+      .by-#{$count}-S { border-top-width: $size * ($coficent * $count); border-bottom-width: $size * ($coficent * $count); border-top-style: solid; border-bottom-style: solid;}
+      .bl-#{$count}-S { border-left-width: $size * ($coficent * $count); border-left-style: solid; }
+      .bt-#{$count}-S { border-top-width: $size * ($coficent * $count); border-top-style: solid; }
+      .br-#{$count}-S { border-right-width: $size * ($coficent * $count); border-right-style: solid; }
+      .bb-#{$count}-S { border-bottom-width: $size * ($coficent * $count); border-bottom-style: solid; }
+    }
+  }
+  @media (min-width: $medium) {
+    @for $count from 0 to $counts {
+      .b-#{$count}-M { border-width: $size * ($coficent * $count); border-style: solid; }
+      .bx-#{$count}-M { border-left-width: $size * ($coficent * $count); border-right-width: $size * ($coficent * $count); border-left-style: solid; border-right-style: solid; }
+      .by-#{$count}-M { border-top-width: $size * ($coficent * $count); border-bottom-width: $size * ($coficent * $count); border-top-style: solid; border-bottom-style: solid;}
+      .bl-#{$count}-M { border-left-width: $size * ($coficent * $count); border-left-style: solid; }
+      .bt-#{$count}-M { border-top-width: $size * ($coficent * $count); border-top-style: solid; }
+      .br-#{$count}-M { border-right-width: $size * ($coficent * $count); border-right-style: solid; }
+      .bb-#{$count}-M { border-bottom-width: $size * ($coficent * $count); border-bottom-style: solid; }
+    }
+  }
+  @media (min-width: $large) {
+    @for $count from 0 to $counts {
+      .b-#{$count}-L { border-width: $size * ($coficent * $count); border-style: solid; }
+      .bx-#{$count}-L { border-left-width: $size * ($coficent * $count); border-right-width: $size * ($coficent * $count); border-left-style: solid; border-right-style: solid; }
+      .by-#{$count}-L { border-top-width: $size * ($coficent * $count); border-bottom-width: $size * ($coficent * $count); border-top-style: solid; border-bottom-style: solid;}
+      .bl-#{$count}-L { border-left-width: $size * ($coficent * $count); border-left-style: solid; }
+      .bt-#{$count}-L { border-top-width: $size * ($coficent * $count); border-top-style: solid; }
+      .br-#{$count}-L { border-right-width: $size * ($coficent * $count); border-right-style: solid; }
+      .bb-#{$count}-L { border-bottom-width: $size * ($coficent * $count); border-bottom-style: solid; }
+    }
+  }
+  @media (min-width: $xlarge) {
+    @for $count from 0 to $counts {
+      .b-#{$count}-XL { border-width: $size * ($coficent * $count); border-style: solid; }
+      .bx-#{$count}-XL { border-left-width: $size * ($coficent * $count); border-right-width: $size * ($coficent * $count); border-left-style: solid; border-right-style: solid; }
+      .by-#{$count}-XL { border-top-width: $size * ($coficent * $count); border-bottom-width: $size * ($coficent * $count); border-top-style: solid; border-bottom-style: solid;}
+      .bl-#{$count}-XL { border-left-width: $size * ($coficent * $count); border-left-style: solid; }
+      .bt-#{$count}-XL { border-top-width: $size * ($coficent * $count); border-top-style: solid; }
+      .br-#{$count}-XL { border-right-width: $size * ($coficent * $count); border-right-style: solid; }
+      .bb-#{$count}-XL { border-bottom-width: $size * ($coficent * $count); border-bottom-style: solid; }
+    }
+  }
+}
+
+// Start Padding
+@include borderCreate(0.06rem, 0.5, 7);

@@ -1,0 +1,186 @@
+// Sizes
+$small: 480px;
+$medium: 834px;
+$large: 1289px;
+$xlarge: 1903px;
+// Width ======================================
+
+@mixin widthCreate ($coficent, $counts, $fix) {
+  @for $count from 0 to $counts {
+    @if $fix {
+      .w-f-#{$count * 5} { width: $coficent * $count; }
+    } @else {
+      .w-#{$count * 5} { width: $coficent * $count; }
+      .w-#{$count * 5}max { max-width: $coficent * $count; }
+      .w-#{$count * 5}min { min-width: $coficent * $count; }
+    }
+  }
+  .w-a{width: auto;}
+  .w-33{ width: 33.33%; }
+  .w-7{ width: 14.28%; }
+  @media (max-width: $small) {
+    @for $count from 0 to $counts {
+      @if $fix {
+        .w-f-#{$count * 5}-XS { width: $coficent * $count; }
+      } @else {
+        .w-#{$count * 5}-XS { width: $coficent * $count; }
+        .w-#{$count * 5}max-XS { max-width: $coficent * $count; }
+        .w-#{$count * 5}min-XS { min-width: $coficent * $count; }
+      }
+    }
+    .w-a-XS{width: auto;}
+    .w-33-XS{ width: 33.33%; }
+    .w-7-XS{ width: 14.28%; }
+  }
+  @media (min-width: $small) {
+    @for $count from 0 to $counts {
+      @if $fix {
+        .w-f-#{$count * 5}-S { width: $coficent * $count; }
+      } @else {
+        .w-#{$count * 5}-S { width: $coficent * $count; }
+        .w-#{$count * 5}max-S { max-width: $coficent * $count; }
+        .w-#{$count * 5}min-S { min-width: $coficent * $count; }
+      }
+    }
+    .w-a-S{width: auto;}
+    .w-33-S{ width: 33.33%; }
+    .w-7-S{ width: 14.28%; }
+  }
+  @media (min-width: $medium) {
+    @for $count from 0 to $counts {
+      @if $fix {
+        .w-f-#{$count * 5}-M { width: $coficent * $count; }
+      } @else {
+        .w-#{$count * 5}-M { width: $coficent * $count; }
+        .w-#{$count * 5}max-M { max-width: $coficent * $count; }
+        .w-#{$count * 5}min-M { min-width: $coficent * $count; }
+      }
+    }
+    .w-a-M{width: auto;}
+    .w-33-M{ width: 33.33%; }
+    .w-7-M{ width: 14.28%; }
+  }
+  @media (min-width: $large) {
+    @for $count from 0 to $counts {
+      @if $fix {
+        .w-f-#{$count * 5}-L { width: $coficent * $count; }
+      } @else {
+        .w-#{$count * 5}-L { width: $coficent * $count; }
+        .w-#{$count * 5}max-L { max-width: $coficent * $count; }
+        .w-#{$count * 5}min-L { min-width: $coficent * $count; }
+      }
+    }
+    .w-a-L{width: auto;}
+    .w-33-L{ width: 33.33%; }
+    .w-7-L{ width: 14.28%; }
+  }
+  @media (min-width: $xlarge) {
+    @for $count from 0 to $counts {
+      @if $fix {
+        .w-f-#{$count * 5}-XL { width: $coficent * $count; }
+      } @else {
+        .w-#{$count * 5}-XL { width: $coficent * $count; }
+        .w-#{$count * 5}max-XL { max-width: $coficent * $count; }
+        .w-#{$count * 5}min-XL { min-width: $coficent * $count; }
+      }
+    }
+    .w-a-XL{width: auto;}
+    .w-33-XL{ width: 33.33%; }
+    .w-7-XL{ width: 14.28%; }
+  }
+};
+
+// Start Width
+@include widthCreate(5%, 21, false);
+
+// Start Width Fixed
+@include widthCreate(2rem, 31, true);
+
+.h-auto{ height: auto; }
+
+// Height ======================================
+
+@mixin heightCreate ($coficent, $counts, $fix) {
+  @for $count from 0 to $counts {
+    @if $fix {
+      .h-f-#{$count * 5} { height: $coficent * $count; }
+      .h-f-#{$count * 5}max { max-height: $coficent * $count; }
+      .h-f-#{$count * 5}min { min-height: $coficent * $count; }
+    } @else {
+      .h-#{$count * 5} { height: $coficent * $count; }
+      .h-#{$count * 5}max { max-height: $coficent * $count; }
+    }
+    .h-100-f{height: 100%!important;}
+  }
+  @media (max-width: $small) {
+    @for $count from 0 to $counts {
+      @if $fix {
+        .h-f-#{$count * 5}-XS { height: $coficent * $count; }
+        .h-f-#{$count * 5}max-XS { max-height: $coficent * $count; }
+        .h-f-#{$count * 5}min-XS { min-height: $coficent * $count; }
+      } @else {
+        .h-#{$count * 5}-XS { height: $coficent * $count; }
+        .h-#{$count * 5}max-XS { max-height: $coficent * $count; }
+      }
+    }
+    .h-100-f-XS{height: 100%!important;}
+  }
+  @media (min-width: $small) {
+    @for $count from 0 to $counts {
+      @if $fix {
+        .h-f-#{$count * 5}-S { height: $coficent * $count; }
+        .h-f-#{$count * 5}max-S { max-height: $coficent * $count; }
+        .h-f-#{$count * 5}min-S { min-height: $coficent * $count; }
+      } @else {
+        .h-#{$count * 5}-S { height: $coficent * $count; }
+        .h-#{$count * 5}max-S { max-height: $coficent * $count; }
+      }
+    }
+    .h-100-f-S{height: 100%!important;}
+  }
+  @media (min-width: $medium) {
+    @for $count from 0 to $counts {
+      @if $fix {
+        .h-f-#{$count * 5}-M { height: $coficent * $count; }
+        .h-f-#{$count * 5}max-M { max-height: $coficent * $count; }
+        .h-f-#{$count * 5}min-M { min-height: $coficent * $count; }
+      } @else {
+        .h-#{$count * 5}-M { height: $coficent * $count; }
+        .h-#{$count * 5}max-M { max-height: $coficent * $count; }
+      }
+    }
+    .h-100-M{height: 100%!important;}
+  }
+  @media (min-width: $large) {
+    @for $count from 0 to $counts {
+      @if $fix {
+        .h-f-#{$count * 5}-L { height: $coficent * $count; }
+        .h-f-#{$count * 5}max-L { max-height: $coficent * $count; }
+        .h-f-#{$count * 5}min-L { min-height: $coficent * $count; }
+      } @else {
+        .h-#{$count * 5}-L { height: $coficent * $count; }
+        .h-#{$count * 5}max-L { max-height: $coficent * $count; }
+      }
+    }
+    .h-100-f-L{height: 100%!important;}
+  }
+  @media (min-width: $xlarge) {
+    @for $count from 0 to $counts {
+      @if $fix {
+        .h-f-#{$count * 5}-XL { height: $coficent * $count; }
+        .h-f-#{$count * 5}max-XL { max-height: $coficent * $count; }
+        .h-f-#{$count * 5}min-XL { min-height: $coficent * $count; }
+      } @else {
+        .h-#{$count * 5}-XL { height: $coficent * $count; }
+        .h-#{$count * 5}max-XL { max-height: $coficent * $count; }
+      }
+    }
+    .h-100-f-XL{height: 100%!important;}
+  }
+};
+
+// Start Height
+@include heightCreate(5%, 21, false);
+
+// Start Height Fixed
+@include heightCreate(2rem, 21, true);

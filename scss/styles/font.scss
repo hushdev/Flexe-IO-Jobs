@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+
+// Sizes
+$small: 480px;
+$medium: 834px;
+$large: 1289px;
+$xlarge: 1903px;
+
+// Font ===================================================
+.h1,
+.h2,
+.h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700; //bold
+}
+
+.h1 {
+  font-size: 65px;
+}
+
+.h2 {
+  font-size: 50px;
+}
+
+.h3 {
+  font-size: 18px;
+}
+
+.t-b {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500; //medium
+  font-size: 33px;
+}
+
+.t-b-small {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500; //medium
+  font-size: 21px;
+}
+
+.t {
+  font-family: 'Jost', sans-serif;
+  font-weight: 400; //regular
+  font-size: 21px;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+
+
+
+@media (max-width:834px) {
+  .h1 {
+    font-size: 40px;
+  }
+  .h2 {
+    font-size: 35px;
+  }
+  .t-b {
+    font-size: 25px;
+  }
+  .t {
+    font-size: 18px;
+  }
+}
+
+@media (max-width:480px) {
+  .h1 {
+    font-size: 27px;
+  }
+  .h2 {
+    font-size: 27px;
+  }
+  .t-b {
+    font-size: 23px;
+  }
+  .t-b-small {
+    font-size: 18px;
+  }
+  .t {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,73 @@
+// Sizes
+$small: 480px;
+$medium: 834px;
+$large: 1289px;
+$xlarge: 1903px;
+
+.center{margin: 0 auto;}
+
+// Postiion ======================================
+
+@mixin positionCreate ($coficent, $counts) {
+  @for $count from 0 to $counts {
+    .l-#{$count * 5} { left: $coficent * $count; }
+    .t-#{$count * 5} { top: $coficent * $count; }
+    .r-#{$count * 5} { right: $coficent * $count; }
+    .b-#{$count * 5} { bottom: $coficent * $count; }
+  }
+  .p-a{ position: absolute; }
+  .p-f{ position: fixed; }
+  @media (max-width: $small) {
+    @for $count from 0 to $counts {
+      .l-#{$count * 5}-XS { left: $coficent * $count; }
+      .t-#{$count * 5}-XS { top: $coficent * $count; }
+      .r-#{$count * 5}-XS { right: $coficent * $count; }
+      .b-#{$count * 5}-XS { bottom: $coficent * $count; }
+    }
+    .p-a-XS{ position: absolute; }
+    .p-f-XS{ position: fixed; }
+  }
+  @media (min-width: $small) {
+    @for $count from 0 to $counts {
+      .l-#{$count * 5}-S { left: $coficent * $count; }
+      .t-#{$count * 5}-S { top: $coficent * $count; }
+      .r-#{$count * 5}-S { right: $coficent * $count; }
+      .b-#{$count * 5}-S { bottom: $coficent * $count; }
+    }
+    .p-a-S{ position: absolute; }
+    .p-f-S{ position: fixed; }
+  }
+  @media (min-width: $medium) {
+    @for $count from 0 to $counts {
+      .l-#{$count * 5}-M { left: $coficent * $count; }
+      .t-#{$count * 5}-M { top: $coficent * $count; }
+      .r-#{$count * 5}-M { right: $coficent * $count; }
+      .b-#{$count * 5}-M { bottom: $coficent * $count; }
+    }
+    .p-a-M{ position: absolute; }
+    .p-f-M{ position: fixed; }
+  }
+  @media (min-width: $large) {
+    @for $count from 0 to $counts {
+      .l-#{$count * 5}-L { left: $coficent * $count; }
+      .t-#{$count * 5}-L { top: $coficent * $count; }
+      .r-#{$count * 5}-L { right: $coficent * $count; }
+      .b-#{$count * 5}-L { bottom: $coficent * $count; }
+    }
+    .p-a-L{ position: absolute; }
+    .p-f-L{ position: fixed; }
+  }
+  @media (min-width: $xlarge) {
+    @for $count from 0 to $counts {
+      .l-#{$count * 5}-XL { left: $coficent * $count; }
+      .t-#{$count * 5}-XL { top: $coficent * $count; }
+      .r-#{$count * 5}-XL { right: $coficent * $count; }
+      .b-#{$count * 5}-XL { bottom: $coficent * $count; }
+    }
+    .p-a-XL{ position: absolute; }
+    .p-f-XL{ position: fixed; }
+  }
+};
+
+// Start Width
+@include positionCreate(5%, 21);
